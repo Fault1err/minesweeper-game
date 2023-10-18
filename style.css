@@ -1,0 +1,614 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #696969;
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: #696969;
+    margin-bottom: 10px;
+}
+
+.render_field {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    padding: 5px;
+    width: 965px;
+    box-shadow: 4px 4px 8px #DCDCDC;
+    transition: 0.2s;
+    margin-bottom: 20px;
+}
+
+.playground {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #DCDCDC;
+    margin: 10px;
+    transition: 0.2s;
+}
+
+.playground div {
+    width: 50px;
+    height: 50px;
+}
+
+.field {
+    border: 0.01px solid grey;
+    box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.bomb_style {
+    text-align: center;
+    padding-top: 5px;
+    font-size: x-large;
+    background-color: #D8BFD8;
+}
+
+.num_fields_style {
+    text-align: center;
+    padding-top: 10px;
+    font-size: x-large;
+}
+
+.num_fields_style_1 {
+    color: #4169E1;
+}
+
+.num_fields_style_2 {
+    color: #3CB371;
+}
+
+.num_fields_style_3 {
+    color: #DC143C;
+}
+
+.num_fields_style_4 {
+    color: #000080;
+}
+
+.num_fields_style_5 {
+    color: #696969;
+}
+
+.num_fields_style_6 {
+    color: #40E0D0;
+}
+
+.num_fields_style_7 {
+    color: #000000;
+}
+
+.num_fields_style_8 {
+    color: #FFFFFF;
+}
+
+.checked {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #9C998D;
+    background-color: #E6E6FA;
+    box-sizing: border-box;
+}
+
+.lose_p {
+    margin-top: 10px;
+    font-size: 25px;
+    color: #DC143C;
+    margin-left: 50px;
+    text-align: left;
+}
+
+.flagged {
+    text-align: center;
+    padding-top: 5px;
+    font-size: x-large;
+    background-color: #D8BFD8;
+}
+
+.bombs_amount_field {
+    margin: 0;
+    margin-left: 50px;
+    text-align: left;
+    font-size: 25px;
+    color: #4169E1;
+    margin-bottom: 15px;
+}
+
+.matches_amount_field {
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 50px;
+    text-align: left;
+    font-size: 25px;
+    color: #4169E1;
+    display: none;
+}
+
+.attention_field {
+    margin-left: 50px;
+    text-align: left;
+    font-size: 15px;
+    color: #DA70D6;
+}
+
+.win_field {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: #C71585;
+}
+
+.text_field {
+    padding: 5px;
+    width: 45%;
+}
+
+.cheat_btn {
+    margin-left: 50px;
+    border: 1px solid #FFA07A;
+    background-color: #FFA07A;
+    border-radius: 5px;
+    box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.5);
+    color: #696969;
+    padding: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+}
+
+.restart_btn {
+    margin-left: 10px;
+    margin-top: 140px;
+    border: 1px solid #FFA07A;
+    background-color: #FFA07A;
+    border-radius: 5px;
+    box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.5);
+    color: #696969;
+    padding: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+}
+
+.timer_field {
+    margin-left: 50px;
+    text-align: left;
+    font-size: 25px;
+    color: #4169E1;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.moves_field {
+    margin-left: 50px;
+    text-align: left;
+    font-size: 25px;
+    color: #4169E1;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.text_field_1 {
+    height: 50%;
+}
+
+.text_field_2 {
+    height: 40%;
+}
+
+.h1_dark {
+    color: #191970;
+}
+
+.render_field_dark {
+    background-color: #A9A9A9;
+}
+
+.playground_dark {
+    background-color: #BC8F8F;
+}
+
+.checked_dark {
+    background-color: #0000CD;
+}
+
+.flagged_dark {
+    background-color: #800080;
+}
+
+.darkmode {
+    background-color: #F5FFFA;
+}
+
+.reset_btn {
+    margin-left: 0px;
+    margin-top: 20px;
+    border: 1px solid #FFA07A;
+    background-color: #FFA07A;
+    border-radius: 5px;
+    box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.5);
+    color: #696969;
+    padding: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+}
+
+.text_field_res {
+    position: absolute;
+    left: 10;
+    display: none;
+    height: 500px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    padding: 5px;
+    width: 500px;
+    box-shadow: 4px 4px 8px #DCDCDC;
+    transition: 0.2s;
+    margin: 0 auto;
+    background-color: #E6E6FA;
+}
+
+.text_field_res_dark {
+    background-color: #FFF5EE;
+}
+
+.results_btn {
+    margin-left: 10px;
+    margin-right: 25px;
+    margin-top: 20px;
+    border: 1px solid #FFA07A;
+    background-color: #FFA07A;
+    border-radius: 5px;
+    box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.5);
+    color: #696969;
+    padding: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+}
+
+.visible {
+    display: block;
+}
+
+.play_to_save_inf {
+    padding-left: 10px;
+    font-size: 20px;
+    color: #696969;
+}
+
+.play_to_save_list {
+    padding-left: 5px;
+    font-size: 20px;
+    color: #696969;
+}
+
+.win_list {
+    padding-left: 5px;
+    font-size: 20px;
+    color: #800080;
+}
+
+.clicked_btn {
+    background-color: #FFC0CB;
+}
+
+@media (max-width: 555px) {
+    .render_field {
+        width: 90%;
+        display: block;
+        height: 100%;
+    }
+
+    .lose_p {
+        margin-top: 10px;
+        font-size: 25px;
+        color: #DC143C;
+        margin-left: 50px;
+        text-align: left;
+    }
+
+    .flagged {
+        text-align: center;
+        padding-top: 5px;
+        font-size: x-large;
+        background-color: #D8BFD8;
+    }
+
+    .bombs_amount_field {
+        margin-left: 50px;
+        margin-top: 5px;
+        text-align: left;
+        font-size: 25px;
+        color: #4169E1;
+    }
+
+    .matches_amount_field {
+        margin-left: 50px;
+        text-align: left;
+        font-size: 25px;
+        color: #4169E1;
+        display: none;
+    }
+
+    .attention_field {
+        margin-left: 50px;
+        text-align: left;
+        font-size: 15px;
+        color: #DA70D6;
+    }
+
+    .win_field {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 25px;
+        color: #C71585;
+    }
+
+    .text_field {
+        width: 90%;
+    }
+
+    .restart_btn {
+        margin-top: 30px;
+    }
+
+    .timer_field {
+        margin-left: 50px;
+    }
+
+    .playground {
+        width: 400px;
+        height: 400px;
+        margin: 25px;
+    }
+
+    .playground div {
+        width: 40px;
+        height: 40px;
+    }
+
+    .text_field_res {
+        position: absolute;
+        top: 0;
+        left: 100;
+        right: 100;
+        display: none;
+        height: 52%;
+        width: 450px;
+    }
+
+    .visible {
+        display: block;
+    }
+
+    .matches_amount_field {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .cheat_btn {
+        margin-bottom: 0px;
+    }
+
+    .bomb_style {
+        padding-top: 0px;
+        font-size: x-large;
+    }
+
+    .num_fields_style {
+        padding-top: 5px;
+        font-size: x-large;
+    }
+
+    .timer_field {
+        font-size: 20px;
+    }
+
+    .moves_field {
+        font-size: 20px;
+    }
+
+    .bombs_amount_field {
+        font-size: 20px;
+    }
+
+    h1 {
+        margin-bottom: 5px;
+    }
+
+    .restart_btn {
+        margin-left: 5px;
+        margin-top: 40px;
+    }
+
+    .reset_btn {
+        margin-left: 0px;
+    }
+
+    .results_btn {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .text_field_1 {
+        height: 215px;
+    }
+
+}
+
+@media (max-width: 395px) {
+
+    .render_field {
+        padding: 0px;
+    }
+
+    .render_field {
+        width: 90%;
+        display: block;
+        height: 100%;
+    }
+
+    .lose_p {
+        margin-top: 10px;
+        font-size: 25px;
+        color: #DC143C;
+        margin-left: 50px;
+        text-align: left;
+    }
+
+    .flagged {
+        text-align: center;
+        padding-top: 5px;
+        font-size: x-large;
+        background-color: #D8BFD8;
+    }
+
+    .bombs_amount_field {
+        margin-left: 50px;
+        text-align: left;
+        font-size: 25px;
+        color: #4169E1;
+    }
+
+    .matches_amount_field {
+        margin-left: 50px;
+        text-align: left;
+        font-size: 25px;
+        color: #4169E1;
+        display: none;
+    }
+
+    .attention_field {
+        margin-left: 50px;
+        text-align: left;
+        font-size: 15px;
+        color: #DA70D6;
+    }
+
+    .win_field {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 25px;
+        color: #C71585;
+    }
+
+    .text_field {
+        width: 90%;
+    }
+
+    .restart_btn {
+        margin-top: 30px;
+    }
+
+    .timer_field {
+        margin-left: 50px;
+    }
+
+    .playground {
+        width: 350px;
+        height: 350px;
+        margin: 1px;
+    }
+
+    .playground div {
+        width: 35px;
+        height: 35px;
+    }
+
+    .text_field_res {
+        position: absolute;
+        top: 0;
+        left: 100;
+        right: 100;
+        display: none;
+        height: 55%;
+        width: 340px;
+    }
+
+    .visible {
+        display: block;
+    }
+
+    .matches_amount_field {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .cheat_btn {
+        margin-bottom: 0px;
+    }
+
+    .bomb_style {
+        padding-top: 2px;
+        font-size: large;
+    }
+
+    .num_fields_style {
+        padding-top: 5px;
+        font-size: large;
+    }
+
+    .timer_field {
+        font-size: 20px;
+    }
+
+    .bombs_amount_field {
+        font-size: 20px;
+    }
+
+    h1 {
+        margin-bottom: 5px;
+    }
+
+    .restart_btn {
+        margin-left: 5px;
+        margin-top: 40px;
+    }
+
+    .reset_btn {
+        margin-left: 0px;
+    }
+
+    .results_btn {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .text_field_1 {
+        height: 215px;
+    }
+
+    .play_to_save_inf {
+        font-size: 15px;
+    }
+
+    .play_to_save_list {
+        font-size: 15px;
+    }
+
+    .win_list {
+        font-size: 15px;
+    }
+
+}
